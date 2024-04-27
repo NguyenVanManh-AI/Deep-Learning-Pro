@@ -76,3 +76,16 @@ class FlowerClassification(APIView):
         }
         return Response(response_data, status=status.HTTP_201_CREATED)
     
+class WebMining(APIView):
+    def post(self, request):
+        id_user = request.data['id_user'] # POST 
+        # id_user = request.data.get('id_user') # GET 
+        recommend_products = [1,2,3,4,5,9,9,9,9]
+        data = {
+            'message': 'Get list product recommend success !',
+            'recommend_products': recommend_products,
+            'id_user': id_user,
+        }
+        return Response(data, status=status.HTTP_200_OK)
+    
+    
