@@ -139,7 +139,7 @@ import LockManyManager from '@/components/admin/admin-dashboard/manage-manager/L
 export default {
     name: "ManageManager",
     setup() {
-        document.title = "Manager Account | LINE Bot"
+        document.title = "Manager Account | AI System"
     },
     components: {
         paginate: Paginate,

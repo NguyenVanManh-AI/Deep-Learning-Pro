@@ -23,7 +23,7 @@
           <img id="avatar_sidebar" :src="admin.avatar ? admin.avatar : require('@/assets/avatar-admin.jpg')"
             alt="Avatar Admin">
           <div class="name_job">
-            <div class="name">Admin LINE OA</div>
+            <div class="name">Admin AI System</div>
             <div class="job"><i class="fa-solid fa-user-shield"></i> admin</div>
           </div>
         </div>

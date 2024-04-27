@@ -167,7 +167,7 @@ export default {
         }
     },
     setup() {
-        document.title = "Account Setting | LINE Bot";
+        document.title = "Account Setting | AI System";
     },
     async mounted() {
         this.user = JSON.parse(localStorage.getItem('user'));

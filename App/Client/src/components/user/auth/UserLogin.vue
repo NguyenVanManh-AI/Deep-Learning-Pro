@@ -10,7 +10,7 @@
 			<div id="big">
 				<div class="container">
 					<form @submit.prevent="login()">
-						<h4>LINE OA Login</h4><br>
+						<h4>AI System</h4><br>
 						<div class="input-form">
 							<input v-model="loginUser.email" required>
 							<div class="underline"></div>
@@ -113,7 +113,7 @@ export default {
 		}
 	},
 	setup() {
-		document.title = "LINE OA Login | LINE Bot";
+		document.title = "AI System | AI System";
 	},
 	mounted() {
 		var appMain = window.document.getElementById('appMain');

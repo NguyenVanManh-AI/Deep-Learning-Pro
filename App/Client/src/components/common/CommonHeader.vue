@@ -1,7 +1,7 @@
 <template>
   <div id="header">
     <div class="title">
-      <span><i class="fa-brands fa-line"></i> LINE Bot</span><span>/</span><span v-html="title"></span>
+      <span><i class="fa-solid fa-robot"></i> AI System</span><span>/</span><span v-html="title"></span>
     </div>
     <div id="contact">
       <li class="list_contact">
@@ -13,9 +13,9 @@
             class="fa-brands fa-linkedin"></i></a>
       </li>
       <div class="email-phone">
-        <li class="contact_email"><a href="mailto:linebot.support@gmail.com"><i class="fa-solid fa-envelope"></i> <span
+        <li class="contact_email"><a href="mailto:ai.system.support@gmail.com"><i class="fa-solid fa-envelope"></i> <span
               class="hidde">Email:</span>
-            <span> linebot.support@gmail.com</span></a></li>
+            <span> ai.system.support@gmail.com</span></a></li>
         <li class="contact_phone"><a href="tel:+84702518919"><i class="fa-solid fa-phone"></i> <span
               class="hidde">Hotline
               24/7 Phone:</span>

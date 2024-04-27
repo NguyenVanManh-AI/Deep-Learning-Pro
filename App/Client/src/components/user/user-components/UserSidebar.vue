@@ -2,7 +2,7 @@
   <div class="sidebar" :class="isUserOpened ? 'open' : ''" :style="cssVars" ref="sidebar">
     <div class="logo-details" style="margin: 10px 14px 0 14px;">
       <img src="@/assets/logo.png" alt="menu-logo" class="menu-logo icon" style="" @click="compadmin">
-      <div class="logo_name" @click="compadmin"> LINEBot </div>
+      <div class="logo_name" @click="compadmin"> AI System </div>
       <i style="color: var(--user-color);" class="bx" :class="isUserOpened ? 'bx-menu-alt-right' : 'bx-menu'" id="btn"
         @click="openSiderbar"></i>
     </div>
@@ -17,7 +17,12 @@
                   setting</span></router-link>
             </li>
           </span>
-          <span :class="{ 'hide': user.role != 'manager' }">
+          <span>
+            <li>
+              <router-link class="links" data-path="flower-recognition" :to="{ name: 'FlowerRecognition' }"><i class="fa-solid fa-fan"></i><span class="links_name">Flowers Recognition</span></router-link>
+            </li>
+          </span>
+          <!-- <span :class="{ 'hide': user.role != 'manager' }">
             <li>
               <router-link class="links" data-path="member-account" :to="{ name: 'MemberAccount' }"><i
                   class="fa-solid fa-users"></i><span class="links_name">Channel manages</span></router-link>
@@ -41,7 +46,7 @@
               <router-link class="links" data-path="statistical-channel" :to="{ name: 'StatisticalChannel' }"><i
                   class="fa-solid fa-chart-pie"></i><span class="links_name">Statistical channel</span></router-link>
             </li>
-          </span>
+          </span> -->
         </ul>
       </div>
       <div class="profile">

@@ -312,7 +312,7 @@ export default {
     },
 
     setup() {
-        document.title = "Manages Broadcast - Mutilcast | LINE Bot"
+        document.title = "Manages Broadcast - Mutilcast | AI System"
     },
 
     mounted() {

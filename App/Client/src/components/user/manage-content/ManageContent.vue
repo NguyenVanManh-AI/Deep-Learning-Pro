@@ -258,7 +258,7 @@ export default {
     },
 
     setup() {
-        document.title = "Manages Content | LINE Bot"
+        document.title = "Manages Content | AI System"
     },
 
     mounted() {

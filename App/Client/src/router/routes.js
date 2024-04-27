@@ -12,6 +12,7 @@ import AdminLogin from '@/components/admin/auth/AdminLogin'
 // user 
 import UserMain from '@/components/user/UserMain'
 import AccountSetting from '@/components/user/account-setting/AccountSetting'
+import FlowerRecognition from '@/components/user/flower-recognition/FlowerRecognition'
 import MemberAccount from '@/components/user/member-account/MemberAccount'
 import ManageContent from '@/components/user/manage-content/ManageContent'
 import ManageBroadcast from '@/components/user/manage-broadcast/ManageBroadcast'
@@ -67,6 +68,7 @@ const routes = [
         beforeEnter: authUser,
         children: [
             { path: 'account-setting', name: 'AccountSetting', component: AccountSetting },
+            { path: 'flower-recognition', name: 'FlowerRecognition', component: FlowerRecognition },
             { path: 'member-account', name: 'MemberAccount', component: MemberAccount },
             { path: 'manage-content', name: 'ManageContent', component: ManageContent },
             { path: 'manage-broadcast', name: 'ManageBroadcast', component: ManageBroadcast },

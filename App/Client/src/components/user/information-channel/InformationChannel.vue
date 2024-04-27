@@ -11,7 +11,7 @@ const { emitEvent } = useEventBus();
 export default {
     name: "InformationChannel",
     setup() {
-        document.title = "Information Channel | LINE Bot";
+        document.title = "Information Channel | AI System";
     },
     mounted() {
         emitEvent('eventTitleHeader', 'Information Channel');

@@ -248,7 +248,7 @@ INSERT INTO `contents` (`id`, `user_id`, `content_type`, `content_data`, `is_del
 	(6, 1, 'text', '{"type":"text","text":"Peace does not mean one where no noise, no trouble, and no toil. When we are in a storm, we still feel the calm of mind. That is the real meaning of peace!"}', 0, 1, 1, '2024-02-23 02:03:02', '2024-02-24 08:29:35'),
 	(7, 1, 'sticker', '{"type":"sticker","packageId":"446","stickerId":"1997"}', 0, 1, 1, '2024-02-23 02:03:17', '2024-02-24 08:29:35'),
 	(8, 1, 'sticker', '{"type":"sticker","packageId":"446","stickerId":"1996"}', 0, 1, 1, '2024-02-23 02:03:25', '2024-02-24 08:29:35'),
-	(9, 1, 'text', '{"type":"text","text":"LINE Bot tập trung phát triển chatbot trên nền tảng LINE OA"}', 0, 1, 1, '2024-02-23 02:05:56', '2024-02-24 08:29:35'),
+	(9, 1, 'text', '{"type":"text","text":"LINE Bot tập trung phát triển chatbot trên nền tảng AI System"}', 0, 1, 1, '2024-02-23 02:05:56', '2024-02-24 08:29:35'),
 	(10, 1, 'text', '{"type":"text","text":"Xin chào mọi người, trưa nay ăn gì???"}', 0, 1, 1, '2024-02-23 02:34:31', '2024-02-24 08:29:35'),
 	(11, 1, 'image', '{"type":"image","originalContentUrl":"https:\\/\\/res.cloudinary.com\\/dzve8benj\\/image\\/upload\\/v1708655939\\/contents\\/pz9lnxhank952nxbeikh.jpg","previewImageUrl":"https:\\/\\/res.cloudinary.com\\/dzve8benj\\/image\\/upload\\/v1708655939\\/contents\\/pz9lnxhank952nxbeikh.jpg"}', 0, 1, 1, '2024-02-23 02:39:00', '2024-02-24 08:29:35'),
 	(12, 8, 'text', '{"type":"text","text":"Hi everyone, I\'m a member of channelsdvsdvsvdsvsdv"}', 0, 8, 1, '2024-02-23 02:43:03', '2024-02-24 08:29:35'),

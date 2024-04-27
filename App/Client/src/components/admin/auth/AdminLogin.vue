@@ -71,7 +71,7 @@ export default {
 		}
 	},
 	setup() {
-		document.title = "Admin Login | LINE Bot";
+		document.title = "Admin Login | AI System";
 	},
 	mounted() {
 		var appMain = window.document.getElementById('appMain');

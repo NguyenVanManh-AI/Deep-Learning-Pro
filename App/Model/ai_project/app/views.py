@@ -48,11 +48,11 @@ class FlowerClassification(APIView):
         return Response(data, status=status.HTTP_200_OK)
     
     def post(self, request):
-        if 'image_file' not in request.data:
+        if 'image_input' not in request.data:
             return Response({'error': 'No image file found'}, status=status.HTTP_400_BAD_REQUEST)
         
         # Đọc hình ảnh từ request và chuyển đổi thành mảng numpy
-        image_data = request.data['image_file']
+        image_data = request.data['image_input']
         image_pil = Image.open(image_data)
         image_np = np.array(image_pil)
 
@@ -65,6 +65,14 @@ class FlowerClassification(APIView):
         feature = self.VGG16_base_model.predict(image) 
         feature = feature.reshape((feature.shape[0], 512*7*7)) 
         pred = self.loaded_best_model.predict(feature) 
-        response_data = {'message': 'POST request received!', 'flower name': self.label_names[pred[0]]}
-        return Response(response_data, status=status.HTTP_201_CREATED) 
+        response_data = {
+            "data": {
+                "flowers_name":self.label_names[pred[0]]
+            },
+            "messages": [
+                "Successful flower identification !"
+            ],
+            "status": 200
+        }
+        return Response(response_data, status=status.HTTP_201_CREATED)
     

@@ -179,7 +179,7 @@ export default {
         UpdateInformationChannel
     },
     setup() {
-        document.title = "Member Account | LINE Bot"
+        document.title = "Member Account | AI System"
     },
     data() {
         return {

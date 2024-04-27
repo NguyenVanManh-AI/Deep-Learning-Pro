@@ -48,7 +48,7 @@ import DoughnutChart from '@/components/user/statistical-channel/DoughnutChart.v
 export default {
     name: "StatisticalChannel",
     setup() {
-        document.title = "Statistical Channel | LINE Bot";
+        document.title = "Statistical Channel | AI System";
     },
     components: {
         BarChart,
