@@ -1,0 +1,1496 @@
+{
+	"info": {
+		"_postman_id": "7c937a32-23ee-4e17-84fb-e161763d2af2",
+		"name": "LINEBot(Main)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16738596",
+		"_collection_link": "https://api-test-fullstack-vn.postman.co/workspace/LINEBot~6c7d3726-b633-4731-ada8-822fea1a6b4d/collection/16738596-7c937a32-23ee-4e17-84fb-e161763d2af2?action=share&source=collection_link&creator=16738596"
+	},
+	"item": [
+		{
+			"name": "[25] [Admin] Feature of Admin",
+			"item": [
+				{
+					"name": "[26] Admin Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"admin123@gmail.com\",\r\n    \"password\":\"1234567\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/admin/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[26] Admin Profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6OTlcL2FwaVwvYWRtaW5cL2xvZ2luIiwiaWF0IjoxNzA3MjAzNDE1LCJleHAiOjE3MDg0MTMwMTUsIm5iZiI6MTcwNzIwMzQxNSwianRpIjoiT3FWQlllMFB4M2RuYVpJWCIsInN1YiI6MSwicHJ2IjoiZGY4ODNkYjk3YmQwNWVmOGZmODUwODJkNjg2YzQ1ZTgzMmU1OTNhOSJ9.h2D2LuJs3cvuB9Sb9YN_RJotEeZtgnw3IOUUp7XS4nY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/admin/profile",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[26] Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6OTlcL2FwaVwvYWRtaW5cL2xvZ2luIiwiaWF0IjoxNzA3MjAzNDE1LCJleHAiOjE3MDg0MTMwMTUsIm5iZiI6MTcwNzIwMzQxNSwianRpIjoiT3FWQlllMFB4M2RuYVpJWCIsInN1YiI6MSwicHJ2IjoiZGY4ODNkYjk3YmQwNWVmOGZmODUwODJkNjg2YzQ1ZTgzMmU1OTNhOSJ9.h2D2LuJs3cvuB9Sb9YN_RJotEeZtgnw3IOUUp7XS4nY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/admin/logout",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[27] Add Manager",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE3MDg0MzM3MDUsImV4cCI6MTcwOTY0MzMwNSwibmJmIjoxNzA4NDMzNzA1LCJqdGkiOiJ5TU9VaUMwSzZucmdXQllSIiwic3ViIjoxLCJwcnYiOiJkZjg4M2RiOTdiZDA1ZWY4ZmY4NTA4MmQ2ODZjNDVlODMyZTU5M2E5In0.eVsZMcIWvAaKyP-IWD1sjr5Otu9ldlT7F4LRL-SHnKw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"thanhnguyen123@yopmail.com\",\r\n    \"name\" : \"Trần Thanh Nguyên\",\r\n    \"line_user_id\" : \"sdv1c2sddd122d31w1w23v5v1svdvdvdv\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/admin/add-manager",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"add-manager"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[28] All Manager",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE3MDg0MTM4ODcsImV4cCI6MTcwOTYyMzQ4NywibmJmIjoxNzA4NDEzODg3LCJqdGkiOiJiUjRpdDVJNm93NDVaNGZXIiwic3ViIjoxLCJwcnYiOiJkZjg4M2RiOTdiZDA1ZWY4ZmY4NTA4MmQ2ODZjNDVlODMyZTU5M2E5In0.jPNSs0CSzitVGtUW4YyD5EHUS2W8i5TXZgvAMsNb_Yw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"search\" : \"\",\r\n    \"is_delete\" : \"all\", // all , 1 , 0 , null \r\n    \"is_block\" : \"all\", // all , 1 , 0 , null \r\n    \"paginate\" : 5,\r\n    \"role\" : \"all\",  // manager , user\r\n    \"page\" : 1,\r\n    \"typesort\" : \"address\" , // name , new , address , gender\r\n    \"sortlatest\" : false \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/admin/managers",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"managers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[29] Block/UnBlock Manager",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE3MDg0Njc5MjMsImV4cCI6MTcwOTY3NzUyMywibmJmIjoxNzA4NDY3OTIzLCJqdGkiOiJKazJrQnMwU2dpSlNDZ3RzIiwic3ViIjoxLCJwcnYiOiJkZjg4M2RiOTdiZDA1ZWY4ZmY4NTA4MmQ2ODZjNDVlODMyZTU5M2E5In0.wNAOv_N0xTroqDid3q8Hheht-kxsymOebAkjSng8KMc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"is_block\" : 1 // 0 OR 1 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/admin/block-manager/29",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"block-manager",
+								"29"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[30] Block/UnBlock Many Manager",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hZG1pblwvbG9naW4iLCJpYXQiOjE3MDg0Njc5MjMsImV4cCI6MTcwOTY3NzUyMywibmJmIjoxNzA4NDY3OTIzLCJqdGkiOiJKazJrQnMwU2dpSlNDZ3RzIiwic3ViIjoxLCJwcnYiOiJkZjg4M2RiOTdiZDA1ZWY4ZmY4NTA4MmQ2ODZjNDVlODMyZTU5M2E5In0.wNAOv_N0xTroqDid3q8Hheht-kxsymOebAkjSng8KMc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ids_manager\" : [1,2,3,4,5,66,77,99, 23, 29],\r\n    \"is_block\" : 1// 0 OR 1 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/admin/block-many-manager",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"block-many-manager"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "[21] [LINE OA] Feature Authencation Line OA",
+			"item": [
+				{
+					"name": "[22] LINE OA Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"nguyenvanmanh2001it1@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[24] LINE OA Profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTcwOTAyODIyNiwiZXhwIjoxNzEwMjM3ODI2LCJuYmYiOjE3MDkwMjgyMjYsImp0aSI6Ino2N0FUeXJNelR1ZTVRSnAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.mRwoopd2uafLcFAKnsD5CdyFkm5wwTHZB6J2RvG_uy4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/user/profile",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[22] Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTcwOTAyODIyNiwiZXhwIjoxNzEwMjM3ODI2LCJuYmYiOjE3MDkwMjgyMjYsImp0aSI6Ino2N0FUeXJNelR1ZTVRSnAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.mRwoopd2uafLcFAKnsD5CdyFkm5wwTHZB6J2RvG_uy4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/user/logout",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[23] Change Password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTcwODM0NTY2OSwiZXhwIjoxNzA5NTU1MjY5LCJuYmYiOjE3MDgzNDU2NjksImp0aSI6IkRwYWpzZkZWVVA2Slo5dU4iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.5ZgEdAFg310TxElfs2R2ELO6obJMZaIwOn0M96ME880",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"current_password\":\"SRuizjTL\",\r\n    \"new_password\":\"user123\",\r\n    \"new_password_confirmation\":\"user123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user/change-password",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[24] Send Code Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"nguyenvanmanh2001it1@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user/forgot-pw-sendcode",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"forgot-pw-sendcode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[24] Form Update Forgot PW",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"new_password\" : \"nguyenvanmanh2001it1\",\r\n    \"new_password_confirmation\" : \"nguyenvanmanh2001it1\",\r\n    \"token\" : \"snTbf9LdFMqqOxAVGGGVrEUJtgr1qvOA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user/forgot-update",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"forgot-update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[24] Update Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbGluZWJvdGJlLXByb2R1Y3Rpb24udXAucmFpbHdheS5hcHBcL2FwaVwvdXNlclwvbG9naW4iLCJpYXQiOjE3MTAzMjI1NTAsImV4cCI6MTcxMTUzMjE1MCwibmJmIjoxNzEwMzIyNTUwLCJqdGkiOiJkNWhIVGtFWGFxQ0t0UXJlIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ROXvoAJpAHDH6TttGBmmkBUie_-meERxy_FDKrDAvlw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Nguyễn Văn Mạnh ",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "TT Huế Pro - Việt Nam Pro ",
+									"type": "text"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "2001-11-11",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0971404311",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/C:/Users/ADMIN/Downloads/Infinity/380703311_17957454353653756_6089759253227406351_n.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/user/update",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "[33] [Manager] Manager manages member accounts",
+			"item": [
+				{
+					"name": "[31] Get Infor Channel",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTcwODg0MDIyMCwiZXhwIjoxNzEwMDQ5ODIwLCJuYmYiOjE3MDg4NDAyMjAsImp0aSI6InhOemFpaWx0d3FUOElXSWciLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sItsJOCtJSvflDZ8aX1AajUoO3b2U_HuNGCd0-fI2rU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user/infor-channel",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"infor-channel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[31] Update Infor Channel",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTcwODUwOTA1MiwiZXhwIjoxNzA5NzE4NjUyLCJuYmYiOjE3MDg1MDkwNTIsImp0aSI6Im5ETTM2SmxWZWNEOGdSSzEiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.1oZLg7bydFAxr-eGKYF6WVXHbtzJkMM4234cycO51hE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"channel_id\" : \"good1\",\r\n    \"channel_name\" : \"good2\",\r\n    \"channel_secret\" : \"good3\",\r\n    \"channel_access_token\" : \"good4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user/update-channel",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"update-channel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[33] Add account member",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTcwODI3MDk0NywiZXhwIjoxNzA5NDgwNTQ3LCJuYmYiOjE3MDgyNzA5NDcsImp0aSI6IndVUHBzNVRzNzlINzNiQ0QiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U4fPqq71mXFOaPOiFIjg2Q7rLXCuzRGAjT6wFCoFvO8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"hoangphuc@gmail.com\",\r\n    \"name\" : \"Hoang Phuc\",\r\n    \"line_user_id\" : \"U4be73630c1486cfa309e4d68a82fa244\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user/add-member",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"add-member"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[48] Search, sort, paginate account member",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6OTlcL2FwaVwvdXNlclwvbG9naW4iLCJpYXQiOjE3MDc5ODQwMzcsImV4cCI6MTcwOTE5MzYzNywibmJmIjoxNzA3OTg0MDM3LCJqdGkiOiJFdlY4QUo0V3VMNEZsYUdPIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.5etF6G3TggFQZO88rIMssA1siLJq7kPGJ7hbQYgBekw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"search\" : \"\",\r\n    \"is_delete\" : \"all\", // all , 1 , 0 , null \r\n    \"is_block\" : \"all\", // all , 1 , 0 , null \r\n    \"paginate\" : 5,\r\n    \"role\" : \"all\", \r\n    \"page\" : 1,\r\n    \"typesort\" : \"new\" , // name , new \r\n    \"sortlatest\" : false \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user/members",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[49] Update account member",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xOTIuMTY4LjEuNDE6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTcwODU2NDk4NiwiZXhwIjoxNzA5Nzc0NTg2LCJuYmYiOjE3MDg1NjQ5ODYsImp0aSI6Im01MFozVjNWd05JeUNGZGsiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.M3lXNjRMlkEzsWfcVkBipEmx4QhLX-XqTjSu1UerHfc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"hoangphuc@gmail.com\",\r\n    \"name\" : \"Hoang Phucddddddddddddddddddddfffffddddffffffffffffffffddddd\",\r\n    \"line_user_id\" : \"U4be73630c1486cfa309e4d68a82fa244\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user/update-member/14",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"update-member",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[55] Soft delete and backup account member",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTcwODQ2ODEzNywiZXhwIjoxNzA5Njc3NzM3LCJuYmYiOjE3MDg0NjgxMzcsImp0aSI6InlVM3ZTemRZQ2RxNzFQMjYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.093olM3n_mS5uisyLlI23V2gofYHjPQIrPQeCFMq1C4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"is_delete\" : 0 // 0 OR 1 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user/delete-member/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"delete-member",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[56] Soft delete and backup many account member",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTcwODQ2ODEzNywiZXhwIjoxNzA5Njc3NzM3LCJuYmYiOjE3MDg0NjgxMzcsImp0aSI6InlVM3ZTemRZQ2RxNzFQMjYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.093olM3n_mS5uisyLlI23V2gofYHjPQIrPQeCFMq1C4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ids_member\" : [1,2,3,4,5,66,77,99,6],\r\n    \"is_delete\" : 0 // 0 OR 1 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user/delete-many-member",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"delete-many-member"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "[57] [LINE OA] Users manages the content",
+			"item": [
+				{
+					"name": "[58] Add Content",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbGluZWJvdGJlLXByb2R1Y3Rpb24udXAucmFpbHdheS5hcHBcL2FwaVwvdXNlclwvbG9naW4iLCJpYXQiOjE3MTAzMjI3MDUsImV4cCI6MTcxMTUzMjMwNSwibmJmIjoxNzEwMzIyNzA1LCJqdGkiOiI3bWcxYTU5bUY3WEVCWEx2Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ZQXt14EQfdNOx6wcdav6pYHMs-URvWL2Hg_JGV7Z9H0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content_type",
+									"value": "image",
+									"type": "text"
+								},
+								{
+									"key": "image_content",
+									"type": "file",
+									"src": "postman-cloud:///1eea5976-b2f7-40e0-b412-680e2f1ad32a"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/content/add",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"content",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[60] Update content",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xOTIuMTY4LjEuNDE6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTcwODU2NDk4NiwiZXhwIjoxNzA5Nzc0NTg2LCJuYmYiOjE3MDg1NjQ5ODYsImp0aSI6Im01MFozVjNWd05JeUNGZGsiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.M3lXNjRMlkEzsWfcVkBipEmx4QhLX-XqTjSu1UerHfc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content_type",
+									"value": "image",
+									"type": "text"
+								},
+								{
+									"key": "image_content",
+									"type": "file",
+									"src": "/C:/Users/MANH/Downloads/bach khoa 2.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/content/update/17",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"content",
+								"update",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[59] Search , sort , paginate content",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTcwODE0Nzc3MCwiZXhwIjoxNzA5MzU3MzcwLCJuYmYiOjE3MDgxNDc3NzAsImp0aSI6IkVaQkZ4RTVtTjh1RmFyWjMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.icGSeM1884LXBJVU3sKxdKYeeqImcrm97HocTzjy4f4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"search\" : \"\" , // chỉ search nội dung với content_type là \"text\" hoặc \"all\" còn lại sticker và image không có gì để search \r\n    \"content_type\" : \"\", // all , text , sticker , image \r\n    \"is_delete\" : \"all\", // all , 1 , 0 , null (1 hay \"1\" , 0 hay \"0\" đều được cả) \r\n    \"role\" : \"all\", // all , manager // chỉ dành cho manager \r\n    \"paginate\" : 5,\r\n    \"page\" : 1,\r\n    \"typesort\" : \"new\" , // name , new , content_type\r\n    \"sortlatest\" : true \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/content/all",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"content",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[61] Soft delete and backup content",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6OTlcL2FwaVwvdXNlclwvbG9naW4iLCJpYXQiOjE3MDgwNzY2NDMsImV4cCI6MTcwOTI4NjI0MywibmJmIjoxNzA4MDc2NjQzLCJqdGkiOiJ5RXRkMnA0eEZtdFNpdnc4Iiwic3ViIjo3LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.cjVA-teBxAVve4X0Rk4G4luVWnwJbXI54cxkB5huwgs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"is_delete\" : 1 // 0 OR 1 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/content/delete-content/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"content",
+								"delete-content",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[62] Soft delete and backup many content",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6OTlcL2FwaVwvdXNlclwvbG9naW4iLCJpYXQiOjE3MDgwNzc2MTIsImV4cCI6MTcwOTI4NzIxMiwibmJmIjoxNzA4MDc3NjEyLCJqdGkiOiJrZTJtaFpYd3VNWEFBUzU1Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.jQ5aP9udPswltV7tZ2oH84GAoMbY4TGGcEVRo43V7vY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ids_content\" : [1,2,3,4,5,6,7,8,9,10,11,12,66,77,99,6],\r\n    \"is_delete\" : 1 // 0 OR 1 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/content/delete-many-content",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"content",
+								"delete-many-content"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[60] Get Content Detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6OTlcL2FwaVwvdXNlclwvbG9naW4iLCJpYXQiOjE3MDgwNzI0ODYsImV4cCI6MTcwOTI4MjA4NiwibmJmIjoxNzA4MDcyNDg2LCJqdGkiOiJVWFd5c3hHcUtva3FVNVlqIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.LnnmIUfmYhnZdeYW_x3AphjLq5RXws88F9R6cBcViu4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/content/detail/9",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"content",
+								"detail",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "[73]\t[LINE OA] User (manager, member) manages their broadcast",
+			"item": [
+				{
+					"name": "[74] Send, Add broadcast (schedule, draft, send now)",
+					"item": [
+						{
+							"name": "[75][76][77][79][82]\tGet Content For Broadcast",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTcwODE2NzE5NSwiZXhwIjoxNzA5Mzc2Nzk1LCJuYmYiOjE3MDgxNjcxOTUsImp0aSI6IjNpWDQwUjcyTklUSTVvSWsiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.8aWpNdBfgfC05SZA3zKlSjfnkInD2HBwMpynFzGSsxw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"search\" : \"\" // chỉ áp dụng với tab 'text'\r\n    // api này để show ra content (is_delete = 0) của channel (chia ra 3 loại tương ứng với 3 tab : text , sticker , image)\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/content/for-broadcast",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"content",
+										"for-broadcast"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "[75]\tSend now broadcast",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTcwODI1MzI5NCwiZXhwIjoxNzA5NDYyODk0LCJuYmYiOjE3MDgyNTMyOTQsImp0aSI6ImJINnh4ZGVzV1Q0bDh5MlciLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ICTtkkTpXHSO-paRbYE37RE1gL5I4fGurSmlzuF27y4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\" : \"Tiêu đề 1\",\r\n    \"content_ids\" : [9,9,17,1,19] // id content của channel với is_delete = 0 // Rule Request min:0 và max:5 \r\n    // tối đa 5 phần tử , và các content có thể được trùng nhau (ví dụ gửi 5 sticker như nhau) \r\n    // sequence\t// thứ tự gửi sẽ được tính theo thứ tự trong mảng content_ids\r\n\r\n    // \"sent_at\" : \"now()\",\r\n    // \"status\" gửi xong sẽ cho sent \r\n    // is_delete : 0 \r\n\r\n    // Những nội dung đã được chọn vào broadcast nhưng có is_delete = 1 thì vẫn được gửi đi . Còn khi tạo mới thì không được chọn \r\n    // những content đó . \r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/broadcast/send-now",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"broadcast",
+										"send-now"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "[76][77] Add broadcast with status = schedule, draft",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTcwODM0NTY2OSwiZXhwIjoxNzA5NTU1MjY5LCJuYmYiOjE3MDgzNDU2NjksImp0aSI6IkRwYWpzZkZWVVA2Slo5dU4iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.5ZgEdAFg310TxElfs2R2ELO6obJMZaIwOn0M96ME880",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\" : \"New Broadcast15\",\r\n    \"content_ids\" : [\r\n        1,1,\r\n        {\r\n            \"packageId\" : \"446\",\r\n            \"stickerId\" : \"1988\"\r\n        },\r\n        1,\r\n        {\r\n            \"packageId\" : \"446\",\r\n            \"stickerId\" : \"1989\"\r\n        }\r\n    ],\r\n    \"sent_at\" : \"2024-03-23 09:11:00\" , // giờ này sẽ là 24h // rule // Y-m-d H:i:s\r\n    \"status\" : \"scheduled\" // scheduled , draf \r\n    // sent_at phải lớn hơn thời gian hiện tại ít nhất 2 phút , format : 2024-02-18 14:15 (YYYY-MM-DD HH:mm)\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/broadcast/add",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"broadcast",
+										"add"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "[78]\tSearch, sort, paginate broadcast",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTcwODMxMTExMSwiZXhwIjoxNzA5NTIwNzExLCJuYmYiOjE3MDgzMTExMTEsImp0aSI6InFtTjdlQ2dzY1U4b3ZVRlAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.B5QTvuf9qaOVKrv75zH2VdCPG96co0UKqiVkJz3w_pc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"search\" : \"\" , // search theo title \r\n    \"status\" : \"all\", // all , draf , scheduled , sent , failed \r\n    \"is_delete\" : \"all\", // all , 1 , 0 , null (1 hay \"1\" , 0 hay \"0\" đều được cả) \r\n    \"role\" : \"manager\", // all , manager // chỉ dành cho manager \r\n    \"paginate\" : 5,\r\n    \"page\" : 1,\r\n    \"typesort\" : \"new\" , // name , new , status , title\r\n    \"sortlatest\" : true \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/broadcast/all",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"broadcast",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[79] Get detail Broadcast",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTcwODI3NjIzMCwiZXhwIjoxNzA5NDg1ODMwLCJuYmYiOjE3MDgyNzYyMzAsImp0aSI6ImJWTTQ1RmJOSDlXZ0Nmc24iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.rohlOrOa1Iami_pNJAwBSl5lRQp_VXWyEG3uGqjfqFI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/broadcast/detail/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"broadcast",
+								"detail",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[79] Update broadcast (title, content, sent_at, status)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTcwODI3NjkzNiwiZXhwIjoxNzA5NDg2NTM2LCJuYmYiOjE3MDgyNzY5MzYsImp0aSI6IlBSZk1USW51Mjd1RFM2Z0QiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.tdQXha6PaZ2gerQBxnFPMUKB2UfiTYvxAflPB9ngq8Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Feature Update Broadcast\",\r\n    \"content_ids\" : [\r\n        {\r\n            \"packageId\" : \"446\",\r\n            \"stickerId\" : \"1988\"\r\n        },\r\n        {\r\n            \"packageId\" : \"446\",\r\n            \"stickerId\" : \"1988\"\r\n        },\r\n        {\r\n            \"packageId\" : \"446\",\r\n            \"stickerId\" : \"1989\"\r\n        },1,1\r\n    ],\r\n    \"sent_at\" : \"2024-03-19 17:51:00\" , // giờ này sẽ là 24h // rule // Y-m-d H:i:s\r\n    \"status\" : \"scheduled\" // scheduled , draf \r\n    // sent_at phải lớn hơn thời gian hiện tại ít nhất 2 phút , format : 2024-02-18 14:15 (YYYY-MM-DD HH:mm)\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/broadcast/update/82",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"broadcast",
+								"update",
+								"82"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[80]\tSoft delete and backup broadcast",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTcwODMwNjkzNiwiZXhwIjoxNzA5NTE2NTM2LCJuYmYiOjE3MDgzMDY5MzYsImp0aSI6Ilc3aEdwWW53NlZIbUpXWDciLCJzdWIiOjE0LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.cmV3B15aNTM9xk7o8rOg5Wg3h--auqOLPi9Vo2Oi6zY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"is_delete\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/broadcast/delete-broadcast/71",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"broadcast",
+								"delete-broadcast",
+								"71"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[81]\tSoft delete and backup many broadcast",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTcwODMxMTExMSwiZXhwIjoxNzA5NTIwNzExLCJuYmYiOjE3MDgzMTExMTEsImp0aSI6InFtTjdlQ2dzY1U4b3ZVRlAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.B5QTvuf9qaOVKrv75zH2VdCPG96co0UKqiVkJz3w_pc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ids_broadcast\" : [1,2,3,4,5,6,7,8,9,10,11,12,66,77,71,99,6],\r\n    \"is_delete\" : 0 // 0 OR 1 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/broadcast/delete-many-broadcast",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"broadcast",
+								"delete-many-broadcast"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[82] Get all user of channel for Broadcast",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTcwODc5NDQzMCwiZXhwIjoxNzEwMDA0MDMwLCJuYmYiOjE3MDg3OTQ0MzAsImp0aSI6IkxlNkw3bm9FTlFrZElTUXAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.byVOCIU_8hgM-YTUR3SE3mS5Rr1rVyJ6XecBqwrTBno",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"search\" : \"\",\r\n    \"is_delete\" : \"0\", // member để test bắt buộc phải có is_delete = 0 và is_block = 0 \r\n    \"is_block\" : \"0\",\r\n    \"role\" : \"all\", \r\n    // \"paginate\" : 5,\r\n    // \"page\" : 1,\r\n    \"typesort\" : \"new\" , // name , new \r\n    \"sortlatest\" : false \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user/members",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[82]\tTest send using multicast",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTcwODE2NzE5NSwiZXhwIjoxNzA5Mzc2Nzk1LCJuYmYiOjE3MDgxNjcxOTUsImp0aSI6IjNpWDQwUjcyTklUSTVvSWsiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.8aWpNdBfgfC05SZA3zKlSjfnkInD2HBwMpynFzGSsxw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content_ids\" : [\r\n        1,1,\r\n        {\r\n            \"packageId\" : \"446\",\r\n            \"stickerId\" : \"1988\"\r\n        },\r\n        1,\r\n        {\r\n            \"packageId\" : \"446\",\r\n            \"stickerId\" : \"1989\"\r\n        }\r\n    ],\r\n    \"member_ids\" : [1,9,14] // rule : min:1 // lưu ý : line user id không được fake , vì sẽ gửi không được \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/broadcast/test-send",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"broadcast",
+								"test-send"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "[83] [Manager] The manager statistics",
+			"item": [
+				{
+					"name": "[85] [Manager] Statistics on number of followers , friends , sent messages , received messages",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2VyXC9sb2dpbiIsImlhdCI6MTcwODg1NzEzMSwiZXhwIjoxNzEwMDY2NzMxLCJuYmYiOjE3MDg4NTcxMzEsImp0aSI6InpCdWRHMUU1dEVQRWliYm4iLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.98me6J-8d2a65EDq-YkpPWmNY0U4OT6kEmEHaL6cUCw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"start_date\" : \"\", // \"2023-11-20\" OR NULL\r\n    \"end_date\" : \"\" // \"2023-11-20\" OR NULL\r\n}\r\n// không có start_date thì sẽ lấy ngày nhỏ nhất trong DB \r\n// không có end_date thì sẽ lấy ngày hiện tại ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/statistical",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"statistical"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Upload file to S3",
+			"item": [
+				{
+					"name": "Upload file",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "postman-cloud:///1eea5976-b2f7-40e0-b412-680e2f1ad32a"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/s3/upload",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"s3",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete file S3",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/s3/delete?key_image=linebot/17103573981680405782.jpg",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"s3",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "key_image",
+									"value": "linebot/17103573981680405782.jpg"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
