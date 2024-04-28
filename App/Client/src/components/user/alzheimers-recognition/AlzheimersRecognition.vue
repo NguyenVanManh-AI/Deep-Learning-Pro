@@ -92,12 +92,12 @@ export default {
         }
     },
     setup() {
-        document.title = "Flowers Recognition | AI System";
+        document.title = "Alzheimers Recognition | AI System";
     },
     async mounted() {
         this.user = JSON.parse(localStorage.getItem('user'));
         this.previewImageSrc = this.alzheimers_image;
-        emitEvent('eventTitleHeader', 'Flowers Recognition');
+        emitEvent('eventTitleHeader', 'Alzheimers Recognition');
     },
     components: {
     },
