@@ -13,6 +13,7 @@ import AdminLogin from '@/components/admin/auth/AdminLogin'
 import UserMain from '@/components/user/UserMain'
 import AccountSetting from '@/components/user/account-setting/AccountSetting'
 import FlowerRecognition from '@/components/user/flower-recognition/FlowerRecognition'
+import AlzheimersRecognition from '@/components/user/alzheimers-recognition/AlzheimersRecognition'
 import MemberAccount from '@/components/user/member-account/MemberAccount'
 import ManageContent from '@/components/user/manage-content/ManageContent'
 import ManageBroadcast from '@/components/user/manage-broadcast/ManageBroadcast'
@@ -69,6 +70,7 @@ const routes = [
         children: [
             { path: 'account-setting', name: 'AccountSetting', component: AccountSetting },
             { path: 'flower-recognition', name: 'FlowerRecognition', component: FlowerRecognition },
+            { path: 'alzheimers-recognition', name: 'AlzheimersRecognition', component: AlzheimersRecognition },
             { path: 'member-account', name: 'MemberAccount', component: MemberAccount },
             { path: 'manage-content', name: 'ManageContent', component: ManageContent },
             { path: 'manage-broadcast', name: 'ManageBroadcast', component: ManageBroadcast },

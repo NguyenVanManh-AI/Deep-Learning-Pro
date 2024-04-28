@@ -36,6 +36,7 @@ import joblib
 from keras.preprocessing.image import img_to_array, load_img
 import cv2
 from PIL import Image
+from tensorflow.keras.models import Model
 
 class FlowerClassification(APIView):
     parser_classes = [MultiPartParser]
@@ -75,12 +76,50 @@ class FlowerClassification(APIView):
             "status": 200
         }
         return Response(response_data, status=status.HTTP_201_CREATED)
+
+class Alzheimer_s(APIView):
+    parser_classes = [MultiPartParser]
+    loaded_model = joblib.load('models/best_model_TransferLearning_LogisticRegression_Alzheimer.pkl')
+    classes = ['MildDemented', 'ModerateDemented', 'NonDemented', 'VeryMildDemented']
+    best_model_ConvNeXt = load_model('models/ConvNeXt_model-022.keras')
+    base_model = Model(inputs=best_model_ConvNeXt.input, outputs=best_model_ConvNeXt.layers[-3].output)
+
+    def get(self, request):
+        data = {'message': 'GET request received!'}
+        return Response(data, status=status.HTTP_200_OK)
     
+    def post(self, request):
+        if 'image_input' not in request.data:
+            return Response({'error': 'No image file found'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        list_image = []
+        image_data = request.data['image_input']
+        image_pil = Image.open(image_data).convert("RGB") # Đọc ảnh theo kiểu RGB 
+        image_np = np.array(image_pil)
+        image_resized = cv2.resize(image_np, (32, 32))
+        image_arr = img_to_array(image_resized) 
+        image = np.expand_dims(image_arr, 0) 
+        list_image.append(image)
+        list_image = np.vstack(list_image)
+        feature = self.base_model.predict(list_image) 
+        feature = feature.reshape((feature.shape[0], 16*4*4)) 
+        pred = self.loaded_model.predict(feature) 
+        response_data = {
+            "data": {
+                "alzheimers_name":self.classes[pred[0]]
+            },
+            "messages": [
+                "Successful Alzheimer identification !"
+            ],
+            "status": 200
+        }
+        return Response(response_data, status=status.HTTP_201_CREATED)
+
 class WebMining(APIView):
     def post(self, request):
         id_user = request.data['id_user'] # POST 
         # id_user = request.data.get('id_user') # GET 
-        recommend_products = [1,2,3,4,5,9,9,9,9]
+        recommend_products = [1,2,3,4,5,9,9,9,9,54,55,56,57]
         data = {
             'message': 'Get list product recommend success !',
             'recommend_products': recommend_products,

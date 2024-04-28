@@ -21,7 +21,7 @@
 /Research/Face_Recognition/Dataset_fine_tuning_train_valid_test
 /Research/Face_Recognition/Dataset_face_fine_tuning_train_valid_test
 Deep Learning.docx
-*.h5
-*.keras
-*.pkl
+# *.h5
+# *.keras
+# *.pkl
 /Documents/Deep Learning and Applications - BKHN

@@ -22,6 +22,11 @@
               <router-link class="links" data-path="flower-recognition" :to="{ name: 'FlowerRecognition' }"><i class="fa-solid fa-fan"></i><span class="links_name">Flowers Recognition</span></router-link>
             </li>
           </span>
+          <span>
+            <li>
+              <router-link class="links" data-path="alzheimers-recognition" :to="{ name: 'AlzheimersRecognition' }"><i class="fa-solid fa-brain"></i><span class="links_name">Alzheimers Recog</span></router-link>
+            </li>
+          </span>
           <!-- <span :class="{ 'hide': user.role != 'manager' }">
             <li>
               <router-link class="links" data-path="member-account" :to="{ name: 'MemberAccount' }"><i
