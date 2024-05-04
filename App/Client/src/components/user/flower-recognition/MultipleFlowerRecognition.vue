@@ -5,7 +5,7 @@
             <div class="list-btn">
                 <button @click="openFileInput" class="btn-pers-primary"><i class="fa-solid fa-upload"></i> Choose
                     Images</button>
-                <input type="file" ref="fileInput" multiple style="display: none;" @change="previewImages">
+                <input type="file" ref="fileInput" multiple style="display: none;" accept="image/*" @change="previewImages">
                 <button @click="cancelSelection" class="btn-pers-cancel"><i class="fa-solid fa-rectangle-xmark"></i>
                     Cancel</button>
                 <button @click="uploadImages" type="submit" class="btn-pers"><i class="fa-solid fa-paper-plane"></i>
