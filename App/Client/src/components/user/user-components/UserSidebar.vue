@@ -24,12 +24,17 @@
           </span>
           <span>
             <li>
-              <router-link class="links" data-path="flower-multiple-recognition" :to="{ name: 'MultipleFlowerRecognition' }"><i class="fa-solid fa-clover"></i><span class="links_name">Multiple Flower Recog</span></router-link>
+              <router-link class="links" data-path="flower-multiple-recognition" :to="{ name: 'MultipleFlowerRecognition' }"><i class="fa-brands fa-pagelines"></i><span class="links_name">My Multiple Flower</span></router-link>
             </li>
           </span>
           <span>
             <li>
               <router-link class="links" data-path="alzheimers-recognition" :to="{ name: 'AlzheimersRecognition' }"><i class="fa-solid fa-brain"></i><span class="links_name">Alzheimers Recog</span></router-link>
+            </li>
+          </span>
+          <span>
+            <li>
+              <router-link class="links" data-path="image-processing-flowers-recognition" :to="{ name: 'IPMultipleFlowerRecognition' }"><i class="fa-solid fa-clover"></i><span class="links_name">Image Processing</span></router-link>
             </li>
           </span>
           <!-- <span :class="{ 'hide': user.role != 'manager' }">
