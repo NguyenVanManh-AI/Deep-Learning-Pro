@@ -117,6 +117,7 @@ export default {
             this.$refs.fileInput.value = '';
         },
         async uploadImages() {
+            this.processing = 0;
             const startTime = performance.now();
             for (let i = 0; i < this.imagePreviews.length; i++) {
                 this.imagePreviews[i].name = null;
