@@ -214,6 +214,7 @@ export default {
 /* upload */
 
 .flower_setting {
+    min-height: 80vh;
     font-weight: bold;
 }
 
