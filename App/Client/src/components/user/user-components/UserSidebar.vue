@@ -24,6 +24,11 @@
           </span>
           <span>
             <li>
+              <router-link class="links" data-path="flower-multiple-recognition" :to="{ name: 'MultipleFlowerRecognition' }"><i class="fa-solid fa-clover"></i><span class="links_name">Multiple Flower Recog</span></router-link>
+            </li>
+          </span>
+          <span>
+            <li>
               <router-link class="links" data-path="alzheimers-recognition" :to="{ name: 'AlzheimersRecognition' }"><i class="fa-solid fa-brain"></i><span class="links_name">Alzheimers Recog</span></router-link>
             </li>
           </span>

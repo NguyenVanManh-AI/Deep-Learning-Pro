@@ -3,7 +3,7 @@
     <template :class="{ loading: true, hide: !isLoading, show: isLoading }">
       <breeding-rhombus-spinner class="loading-component" :animation-duration="2000" :size="65" color="#06C755" />
       <div id="titleLoading">
-        <i class="fa-brands fa-line"></i> AI Advanced
+        <i class="fa-solid fa-microchip"></i> AI Advanced
       </div>
     </template>
     <template id="appMain" :class="{ hide: isLoading, show: !isLoading }">
@@ -153,7 +153,7 @@ button {
   display: block;
 }
 
-.btn-pers {
+.btn-pers, .btn-pers-primary, .btn-pers-cancel {
   position: relative;
   left: 50%;
   padding: 1em 2.5em;
@@ -179,7 +179,30 @@ button {
   transform: translate(-50%, -7px);
 }
 
+.btn-pers-primary:hover {
+  background-color: var(--blue-color);
+  box-shadow: 0px 15px 20px #a7d2ff;
+  color: #fff;
+  transform: translate(-50%, -7px);
+}
+
+.btn-pers-cancel:hover {
+  background-color: #fa482c;
+  box-shadow: 0px 15px 20px #fc8775;
+  color: #fff;
+  transform: translate(-50%, -7px);
+}
+
+
 .btn-pers:active {
+  transform: translate(-50%, -1px);
+}
+
+.btn-pers-primary:active {
+  transform: translate(-50%, -1px);
+}
+
+.btn-pers-cancel:active {
   transform: translate(-50%, -1px);
 }
 
