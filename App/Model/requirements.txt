@@ -50,12 +50,12 @@ scikit-learn==1.4.1.post1
 scipy==1.13.0
 six==1.16.0
 sqlparse==0.4.4
-# tensorboard==2.16.2
-tensorboard==2.15.0
+# tensorboard==2.16.2 # my project version local 
+tensorboard==2.15.0 # xla version colab   
 tensorboard-data-server==0.7.2
 tensorflow==2.15.0
-tensorflow-intel==2.15.0
-# tensorflow==2.16.1
+# tensorflow==2.16.1 # my project version local fit with load models vgg16 and conNeXt 
+tensorflow-intel==2.15.0 # xla version colab fit with load models  efficientnet
 # tensorflow-intel==2.16.1
 tensorflow-io-gcs-filesystem==0.31.0
 termcolor==2.4.0
