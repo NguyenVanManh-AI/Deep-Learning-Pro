@@ -12,7 +12,7 @@
                     Recognition</button>
                 <span class="number-img text-primary font-weight-bold h5 mr-6"> {{ processing + "/" + imagePreviews.length }} img</span>
                 <span class="text-success font-weight-bold h5"><i class="fa-solid fa-stopwatch-20"></i> {{ (timeProcessing/1000).toFixed(5) }} seconds</span>
-                <select class="d-inline float-right form-control col-3">
+                <select v-model="model_select" class="d-inline float-right form-control col-3">
                     <option value="visiontransformer">Vision Transformer (ViT)</option>
                     <option value="googlenet">GoogLeNet Model</option>
                     <option value="efficientnetb6">EfficientNetB6 Model</option>
@@ -78,6 +78,7 @@ export default {
             imagePreviews: [],
             processing : 0,
             timeProcessing: 0,
+            model_select: "googlenet"
         }
     },
     setup() {
@@ -126,6 +127,7 @@ export default {
                 try {
                     const formData = new FormData();
                     formData.append('image_input', this.imagePreviews[i].file);
+                    formData.append('model_select', this.model_select);
                     const { data, messages } = await ModelRequest.post('image-processing-flower', formData, false);
                     console.log(data.flowers_name);
                     this.imagePreviews[i].name = data.flowers_name;
